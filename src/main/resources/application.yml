@@ -1,0 +1,31 @@
+
+spring:
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+  profiles:
+    active: debug
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mynovel?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+#    username: root
+#    password: Gw09dianxin
+    username: myuser
+    password: rvTsMakUi8#jj
+  servlet:
+     multipart:
+
+       max-file-size: 100MB
+       max-request-size:  1000MB
+       enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  tomcat:
+    uri-encoding: UTF-8
